@@ -20,4 +20,14 @@ io.on('connection', function(socket) {
             io.sockets.emit('system', nickname, users.length, 'login'); //向所有连接到服务器的客户端发送当前登陆用户的昵称
         }
     });
+    socket.on('disconnect', function() {
+        //将断开连接的用户从users中删除
+        users.splice(socket.userIndex, 1);
+        //通知除自己以外的所有人
+        socket.broadcast.emit('system', socket.nickname, users.length, 'logout');
+    });
+    socket.on('postMsg', function(msg) {
+        //将消息发送到除自己外的所有用户
+        socket.broadcast.emit('newMsg', socket.nickname, msg);
+    });
 });
