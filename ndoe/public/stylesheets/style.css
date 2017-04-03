@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    height: 800px;
+    width: 1000px;
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    border: 1px solid black;
+}
+#header{
+    position: relative;
+    height: 100px;
+    width: 1000px;
+    font-weight:800;
+    font-size: 200%;
+    background-color: bisque;
+    line-height: 100px;
+}
+#message{
+    position: relative;
+    height: 500px;
+    width: 1000px;
+    border-bottom: 1px solid black;
+}
+#chatting{
+    position: relative;
+    height: 200px;
+    width: 1000px;
+    top:0;
+    left: 0;
+}
+#messageInput{
+    height: 200px;
+    width: 1000px;
+    position: relative;
+}
+#login{
+    position: absolute;
+    height: 800px;
+    width: 1000px;
+    background-color: gray;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+}
+#nickWrapper{
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    text-align: center;
+    color: #fff;
+    display: none;
+    padding-top: 200px;
+}
+

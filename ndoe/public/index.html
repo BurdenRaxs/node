@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>talktalk</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            TalkTalk
+        </div>
+        <div id="message"></div>
+        <div id="chatting">
+            <!--<div id="item">-->
+                <!--<input id="colorStyle" type="color" placeHolder='#000' title="font color" />-->
+                <!--<input id="clearBtn" type="button" value="clear" title="clear screen" />-->
+            <!--</div>-->
+            <textarea id="messageInput" placeHolder="enter to send"></textarea>
+        </div>
+        <div id="login">
+            <div id="nickWrapper">
+                <p id="info">Loading</p>
+                <input type="text" placeHolder="nickname" id="nicknameInput" />
+                <input type="button" value="OK" id="loginBtn" />
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="javascripts/talk.js"></script>
+</body>
+</html>
